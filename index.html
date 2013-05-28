@@ -1,1021 +1,1768 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
 
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-	<title>PCM HyCare</title> 
-    
-	<link rel="stylesheet" href="css/jquery.mobile.pcm-1.3.1.css" />
-	<script src="lib/jquery-1.9.1.min.js"></script>
-	<script src="lib/jquery.mobile-1.3.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+    <title>PCM HyCare</title>
+    <link href="css/jquery.mobile.pcm-1.3.1.min.css" rel="stylesheet">
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script src="lib/jquery.mobile-1.3.1.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
     <script src="js/jcanvas-13.04.11.min.js"></script>
-    <script src="js/caption.js"></script>
-	<script src="js/script.js"></script>
-    
-	<!--Adobe Edge Runtime-->
-    <script type="text/javascript" charset="utf-8" src="content/edge/option4-garniture_edgePreload.js"></script>
-    <script type="text/javascript" charset="utf-8" src="content/edge/option10_edgePreload.js"></script>
-    <style>
-        .edgeLoad-option4-garniture { visibility:hidden; }
-    </style>
-	<!--Adobe Edge Runtime End-->
-</head> 
+    <script src="js/caption.min.js"></script>
+    <script src="js/script.min.js"></script>
+</head>
 
-	
-<body> 
+<body>
+    <!-- Start of first page: #home -->
 
-<!-- Start of first page: #home -->
-<div data-role="page" id="home">
+    <div data-role="page" id="home">
+        <div id="intro">
+            <span class="star"></span> <span class="star"></span> <span class=
+            "star"></span> <span class="star"></span> <span class=
+            "star"></span>
 
-	<div data-role="header">
-		<h1>HyCare<sup>™</sup> préserve le fruit de votre travail</h1>
-	</div><!-- /header -->
+            <div id="hand"></div>
 
-	<div data-role="content" >
-    	<img src="content/img/home-pump.png" width="672" height="108" />
-        <div class="m1" data-role="controlgroup" data-type="horizontal">
-            <a href="#qualite" data-role="button" data-transition="slide">Qualité</a>	
-            <a href="#securite" data-role="button" data-transition="slide">Sécurité</a>	
-            <a href="#efficience" data-role="button" data-transition="slide">Efficience</a>
-        </div>
-        <div class="m2" data-role="controlgroup" data-type="horizontal">
-            <a href="#marches" data-role="button" data-transition="slide">Marchés</a>	
-            <a href="#options" data-role="button" data-transition="slide">Options</a>
-        </div>
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-theme="d">
-		<p><a href="#contact" data-inline="true" data-role="button" data-transition="slide"><img src="content/img/home-btn-contact.png" width="204" height="104" alt="Contact" /></a></p>	
-	</div><!-- /footer -->
-</div><!-- /page one -->
-
-
-<!-- Start of second page: #qualite -->
-<div data-role="page" class="sub-page" id="qualite" data-theme="a">	<div data-role="header">
-	<div class="head-marquee">Qualité</div>
-		<h1>HyCare<sup>™</sup></h1>
-		<h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="a">
-    	<img src="content/img/technologie-moineau.png" width="104" height="35" style="float:left; margin-left:10px;" />
-    	<div class="article">
-            <h3><strong>La technologie Moineau™</strong> est celle qui préserve le mieux la texture de votre produit et des marquants.</h3>	
-            
-            <div class="ui-grid-b">
-                <div class="ui-block-a">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#qualite-1" data-role="button" data-transition="slide"><img src="content/img/qualite-m1.jpg" width="127" height="127" /><br /> Voir le principe Moineau</a>
-                    </div>
-                </div>
-                <div class="ui-block-b">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#qualite-2" data-role="button" data-transition="slide"><img src="content/img/qualite-m2.jpg" width="127" height="127" /><br /> Voir l'animation CFD</a>
-                    </div>
-                </div>
-                <div class="ui-block-c">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#qualite-3" data-role="button" data-transition="slide"><img src="content/img/qualite-m3.jpg" width="127" height="127" /><br /> Voir les conditions optimales</a>
-                    </div>
+            <div id="plate">
+                <div id="title">
+                    <h1>le fruit de votre travail</h1>
                 </div>
             </div>
-		</div>
-  </div><!-- /content -->
-	
-	<div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
-        
-        <!-- Start of second page: #qualite -->
-        <div data-role="page" class="sub-page" id="qualite-1" data-theme="b">
-            <div data-role="header">
-                <div class="head-marquee">Qualité</div>
-            	<h1>HyCare<sup>™</sup></h1>
-                <h2>respecte la qualité et la texture de vos produits</h2>
-                <p><a href="#qualite" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
+        </div>
+
+        <div data-role="header">
+            <h1><span style="opacity: 0">HyCare<sup>™</sup></span> <span style=
+            "opacity: 0">préserve</span> <span style="opacity: 0">le fruit de
+            votre travail</span></h1>
+        </div><!-- /header -->
+
+        <div data-role="content">
+            <img height="108" src="content/img/home-pump.png" width="672">
+
+            <div class="m1" data-role="controlgroup" data-type="horizontal">
+                <a data-role="button" data-transition="slide" href=
+                "#qualite">Qualité</a> <a data-role="button" data-transition=
+                "slide" href="#securite">Sécurité</a> <a data-role="button"
+                data-transition="slide" href="#efficience">Efficience</a>
             </div>
-            <!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-                    <h3><strong>La technologie Moineau™</strong></h3>
-                    <img src="content/img/anim-technologie-moineau.gif" start="fileopen" />
-                </div>
-            </div><!-- /content -->
-            
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page two -->
-        
-        <!-- Start of second page: #qualite -->
-        <div data-role="page" class="sub-page" id="qualite-2" data-theme="b">
-            <div data-role="header">
-                <div class="head-marquee">Qualité</div>
-                <h1>HyCare<sup>™</sup></h1>
-                <h2>respecte la qualité et la texture de vos produits</h2>
-                <p><a href="#qualite" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
+
+            <div class="m2" data-role="controlgroup" data-type="horizontal">
+                <a data-role="button" data-transition="slide" href=
+                "#marches">Marchés</a> <a data-role="button" data-transition=
+                "slide" href="#options">Options</a>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-theme="d">
+            <p><a data-inline="true" data-role="button" data-transition="slide"
+            href="#contact"><img alt="Contact" height="104" src=
+            "content/img/home-btn-contact.png" width="204"></a></p>
+        </div><!-- /footer -->
+    </div><!-- /page one -->
+    <!-- Start of second page: #qualite -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="qualite">
+        <div data-role="header">
+            <div class="head-marquee">
+                Qualité
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>respecte la qualité et la texture de vos produits.</h2>
+
+            <p><a class="btn-home" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <img height="35" src="content/img/technologie-moineau.png" style=
+            "float:left; margin-left:10px;" width="104">
+
+            <div class="article">
+                <h3><strong>La technologie Moineau™</strong> est celle qui
+                préserve le mieux la texture de votre produit et des
+                marquants.</h3>
+
                 <div class="ui-grid-b">
                     <div class="ui-block-a">
                         <div class="ui-bar ui-bar-e">
-                            <div id="fiche1">	
-                                <p class="title">Pompe Bi-wing</p>
-                                <p><span>Seulement 15%</span><sub>(1)</sub><br /> de la texture du produit est respectée</p>
-                                <img src="content/img/biwing.gif" start="fileopen" />
-                            </div>
+                            <a data-role="button" data-transition="slide" href=
+                            "#qualite-1"><img height="127" src=
+                            "content/img/qualite-m1.jpg" width="127"><br>
+                            Voir le principe Moineau</a>
                         </div>
                     </div>
+
                     <div class="ui-block-b">
                         <div class="ui-bar ui-bar-e">
-                            <div id="fiche2">	
-                                <p class="title"><em>HyCare<sup>™</sup></em></p>
-                                <p><span>67%</span><sub>(1)</sub><br /> de la texture du produit est respectée</p>
-                                <img src="content/img/hycare.gif" start="fileopen" />
-                            </div>
+                            <a data-role="button" data-transition="slide" href=
+                            "#qualite-2"><img height="127" src=
+                            "content/img/qualite-m2.jpg" width="127"><br>
+                            Voir l'animation CFD</a>
                         </div>
                     </div>
+
                     <div class="ui-block-c">
                         <div class="ui-bar ui-bar-e">
-                            <div id="fiche3">	
-                                <p class="title">Pompe à lobes</p>
-                                <p><span>Seulement 14%</span><sub>(1)</sub><br /> de la texture du produit est respectée</p>
-                                <img src="content/img/lobe.gif" start="fileopen" />
-                            </div>
+                            <a data-role="button" data-transition="slide" href=
+                            "#qualite-3"><img height="127" src=
+                            "content/img/qualite-m3.jpg" width="127"><br>
+                            Voir les conditions optimales</a>
                         </div>
                     </div>
                 </div>
-                <p class="small">(1) Résultats de tests réalisés au Flow Technology Center PCM sur un fluide modèle aux caractéristiques similaires au yaourt à 4 bars et 4m3/h. Les performances d’une pompe HycareTM à deux pas ont été comparées à celles de pompes à lobe et Bi-wing de tailles et cylindrées équivalentes.</p>
-          </div><!-- /content -->
-            
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page two -->
-        
-        <!-- Start of second page: #qualite-3 -->
-        <div data-role="page" class="sub-page" id="qualite-3" data-theme="b">
-            <div data-role="header">
-                <div class="head-marquee">Qualité</div>
-                <h1>HyCare<sup>™</sup></h1>
-                <h2>respecte la qualité et la texture de vos produits</h2>
-                <p><a href="#qualite" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-                    <h3>Conditions d'opération optimales pour préserver la texture du produit</h3>
-                    <div class="encart-image">
-                        <img src="content/img/conditions-optimales.png" width="691" height="413" />
-                    </div>
-                </div>
-          </div><!-- /content -->
-            
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #qualite-3 -->
+            </div>
+        </div><!-- /content -->
 
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #qualite -->
 
-<!-- Start of second page: #securite -->
-<div data-role="page" class="sub-page" id="securite" data-theme="a">
-	<div data-role="header">
-		<div class="head-marquee">Sécurité</div>
-		<h1>HyCare<sup>™</sup></h1>
-		<h2>partenaire de vos engagements envers les consommateurs.</h2>
-        <p><a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-	</div><!-- /header -->
+    <div class="sub-page" data-role="page" data-theme="b" id="qualite-1">
+        <div data-role="header">
+            <div class="head-marquee">
+                Qualité
+            </div>
 
-	<div data-role="content" data-theme="a">
-        <div class="article">
-            <div class="ui-grid-b n1">
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>respecte la qualité et la texture de vos produits.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#qualite"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+            <h3><strong>La technologie Moineau™</strong></h3><img src=
+            "content/img/anim-technologie-moineau.gif"></div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #qualite -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="qualite-2">
+        <div data-role="header">
+            <div class="head-marquee">
+                Qualité
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>respecte la qualité et la texture de vos produits.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#qualite"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="ui-grid-b">
                 <div class="ui-block-a">
                     <div class="ui-bar ui-bar-e">
-                        <img src="content/img/certification-3-A.png" width="90" height="74" />
-                        <p>Design Certifié 3-A.</p>
+                        <div id="fiche1">
+                        <p class="title">Pompe Bi-Wing</p>
+
+                        <p><span>Seulement 15%</span> <sub>(1)</sub><br>
+                        de la texture du produit est respectée</p><img src=
+                        "content/img/biwing.gif"></div>
                     </div>
                 </div>
+
                 <div class="ui-block-b">
                     <div class="ui-bar ui-bar-e">
-                        <img src="content/img/ehedg-el.png" width="63" height="77" />
-                        <p>Design EHEDG type EL.</p>
+                        <div id="fiche2">
+                        <p class="title"><em>HyCare<sup>™</sup></em></p>
+
+                        <p><span>67%</span> <sub>(1)</sub><br>
+                        de la texture du produit est respectée</p><img src=
+                        "content/img/hycare.gif"></div>
                     </div>
                 </div>
+
                 <div class="ui-block-c">
                     <div class="ui-bar ui-bar-e">
-                        <img src="content/img/conformite-1935-2004-eu-fda-usp.png" width="63" height="67" />
-                        <p>Matériaux conformes 1935/2004 EU, FDA, USP.</p>
+                        <div id="fiche3">
+                        <p class="title">Pompe à lobes</p>
+
+                        <p><span>Seulement 14%</span> <sub>(1)</sub><br>
+                        de la texture du produit est respectée</p><img src=
+                        "content/img/lobe.gif"></div>
                     </div>
                 </div>
             </div>
-            
-            <div class="ui-grid-a">
-                <div class="ui-block-a">
-                    <div class="ui-bar ui-bar-e">
-                        <img src="content/img/logo-cfd.png" width="146" height="82" />
-                        <p>La pompe <em>HyCare™</em> vous permet de garantir une hygiène optimale de votre process. Grâce à la CFD (Computational Fluid Dynamics), <em>HyCare™</em> améliore l'effet du nettoyage en place de 30%.</p>
-                        <a href="#securite-1" data-role="button" data-transition="slide" class="link">Voir le principe CFD</a>
+
+            <p class="small">(1) Résultats de tests réalisés au Flow Technology
+            Center PCM sur un fluide modèle aux caractéristiques similaires au
+            yaourt à 4 bars et 4m3/h. Les performances d’une pompe
+            Hycare<sup>TM</sup> à deux pas ont été comparées à celles de pompes
+            à lobe et Bi-wing de tailles et cylindrées équivalentes.</p>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #qualite-3 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="qualite-3">
+        <div data-role="header">
+            <div class="head-marquee">
+                Qualité
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>respecte la qualité et la texture de vos produits.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#qualite"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Conditions d'opération optimales pour préserver la texture
+                du produit</h3>
+
+                <div class="encart-image"><img height="413" src=
+                "content/img/conditions-optimales.png" width="691"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #qualite-3 -->
+    <!-- Start of second page: #securite -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="securite">
+        <div data-role="header">
+            <div class="head-marquee">
+                Sécurité
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>partenaire de vos engagements envers les consommateurs.</h2>
+
+            <p><a class="btn-home" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <div class="ui-grid-b n1">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <img height="74" src=
+                            "content/img/certification-3-A.png" width="90">
+
+                            <p>Design Certifié 3-A.</p>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <img height="77" src="content/img/ehedg-el.png"
+                            width="63">
+
+                            <p>Design EHEDG type EL.</p>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-e">
+                            <img height="67" src=
+                            "content/img/conformite-1935-2004-eu-fda-usp.png"
+                            width="63">
+
+                            <p>Matériaux conformes 1935/2004 EU, FDA, USP.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="ui-block-b">
-                    <div class="ui-bar ui-bar-e">
-                        <img src="content/img/logo-duraflex-3ans-small.png" width="160" height="82" />
-                        <p>Duraflex, la bielle flexible conçue pour le nettoyage en place.</p>
-            			<a href="#securite-2" data-role="button" data-transition="slide" class="link">Voir les caractéristiques</a>
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <img height="82" src="content/img/logo-cfd.png"
+                            width="146">
+
+                            <p>La pompe <em>HyCare™</em> vous permet de
+                            garantir une hygiène optimale de votre process.
+                            Grâce à la CFD (Computational Fluid Dynamics),
+                            <em>HyCare™</em> améliore l'effet du nettoyage en
+                            place de 30%.</p><a class="link" data-role="button"
+                            data-transition="slide" href="#securite-1">Voir le
+                            principe CFD</a>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <img height="82" src=
+                            "content/img/logo-duraflex-3ans-small.png" width=
+                            "160">
+
+                            <p>Duraflex, la bielle flexible conçue pour le
+                            nettoyage en place.</p><a class="link" data-role=
+                            "button" data-transition="slide" href=
+                            "#securite-2">Voir les caractéristiques</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-	</div><!-- /content -->
-	
-	<div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #securite -->
+        </div><!-- /content -->
 
-        <!-- Start of second page: #securite-1 -->
-        <div data-role="page" class="sub-page" id="securite-1" data-theme="b">
-        	<div data-role="header">
-				<div class="head-marquee">Sécurité</div>
-				<h1>HyCare<sup>™</sup></h1>
-				<h2>partenaire de vos engagements envers les consommateurs.</h2>
-                <p><a href="#securite" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-                    <h3>LA CFD au service de l'hygiène.</h3>
-                    <p>CFD : Computational Fluid Dynamic - simulation numérique des fluides.</p>
-                    <div class="encart-image">
-                        <img src="content/img/principeCFDlegende.png" width="754" height="185" />
-                    </div>
-                    <a href="#securite-1-popup" data-role="button" data-inline="true" data-rel="popup" data-position-to="window" class="link">Voir la vidéo</a>
-                    <div data-role="popup" id="securite-1-popup" class="ui-content" data-overlay-theme="a" data-theme="d" data-video-width="960" data-video-height="540" data-video-poster="content/video/PCM-HY_CFD.jpg" data-video-url="content/video/PCM-HY_CFD.mp4"></div>
-                </div>
-            </div><!-- /content -->
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #securite-1 -->
-        
-        <!-- Start of second page: #securite-2 -->
-        <div data-role="page" class="sub-page" id="securite-2" data-theme="b">
-            <div data-role="header">
-                <div class="head-marquee">Sécurité</div>
-                <h1>HyCare<sup>™</sup></h1>
-				<h2>optimise votre production.</h2>
-                <p><a href="#securite" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="60" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-                    <h3>Duraflex, la bielle flexible conçue pour le nettoyage en place.</h3>
-                    <p>Duraflex</p>
-                    <ul>
-                        <li>Une seule pièce sans articulation</li>
-                        <li>Pas de zone de rétention possible du produit</li>
-                        <li>Optimisée pour le Nettoyage En Place</li>
-                    </ul>
-                    <div class="encart-image">
-                        <img src="content/img/duraflexOk.png" width="535" height="39" />
-                    </div>
-                    
-                    <p>Articulation ouverte</p>
-                    <ul>
-                        <li>Zone de rétention possible dans l'articulation</li>
-                        <li>Largage possible de particules dû à l'usure des pièces</li>
-                    </ul>
-                    <div class="encart-image">
-                        <img src="content/img/duraflexBad.png" width="535" height="67" />
-                    </div>
-                    <a href="#efficience-6" data-role="button" data-transition="slide" class="link">Voir les vidéos de démontage</a>
-                </div>
-            </div><!-- /content -->
-            
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #securite-2 -->
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #securite -->
+    <!-- Start of second page: #securite-1 -->
 
-
-<!-- Start of second page: #efficience -->
-<div data-role="page" class="sub-page" id="efficience" data-theme="a">
-	<div data-role="header">
-		<div class="head-marquee">Efficience</div>
-		<h1>HyCare<sup>™</sup></h1>
-		<h2>optimise votre production.</h2>
-        <p><a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="a">
-        <div class="article">
-            <h3><em>HyCare™</em> optimise votre production.</h3>
-            <div class="ui-grid-b">
-                <div class="ui-block-a">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#efficience-1" data-role="button" data-transition="slide"><img src="content/img/efficience-m1.jpg" width="128" height="128" />Gain de place</a>
-                    </div>
-                </div>
-                <div class="ui-block-b">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#efficience-2" data-role="button" data-transition="slide"><img src="content/img/efficience-m2.jpg" width="128" height="128" />Rendement énergétique</a>
-                    </div>
-                </div>
-                <div class="ui-block-c">
-                    <div class="ui-bar ui-bar-e">
-            			<a href="#efficience-3" data-role="button" data-transition="slide"><img src="content/img/efficience-m3.jpg" width="128" height="128" />Gains</a>	
-                    </div>
-                </div>
-            </div><!-- /grid-b -->	
-            
-            <h3>Une fiabilité à toute épreuve.</h3>
-            <div class="ui-grid-b">
-                <div class="ui-block-a">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#efficience-4" data-role="button" data-transition="slide"><img src="content/img/efficience-m4.jpg" width="128" height="128" />Système anti rotation du stator</a>
-                    </div>
-                </div>
-                <div class="ui-block-b">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#efficience-5" data-role="button" data-transition="slide"><img src="content/img/efficience-m5.jpg" width="128" height="128" />Bielle flexible en titane Duraflex</a>
-                    </div>
-                </div>
-            </div><!-- /grid-b -->
-            
-            <h3>Maintenance simplifiée.</h3>
-            <div class="ui-grid-b">
-                <div class="ui-block-a">
-                    <div class="ui-bar ui-bar-e">
-                    	<a href="#efficience-6" data-role="button" data-transition="slide"><img src="content/img/efficience-m6.jpg" width="128" height="128" />Démontage</a>
-                    </div>
-                </div>
-            </div><!-- /grid-b -->
-            
-		</div>
-	</div><!-- /content -->
-	
-	<div data-role="footer"></div><!-- /footer -->
-</div><!-- /page efficience -->
-
-        <!-- Start of second page: #efficience-1 -->
-        <div data-role="page" class="sub-page" id="efficience-1" data-theme="b">
-        	<div data-role="header">
-			<div class="head-marquee">Efficience</div>
-				<h1>HyCare<sup>™</sup></h1>
-				<h2>optimise votre production.</h2>
-                <p><a href="#efficience" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-            		<h3><em>HyCare™</em>, la pompe à vis excentrée hygiénique la plus courte du marché.</h3>	
-                    <p>Equipée de la nouvelle bielle Duraflex, l'<em>HyCare™</em> est 20% plus courte. Cela diminue sensiblement les coûts d'intégration et de transport.</p>
-                </div>
-                    <div class="encart-image">
-                        <img src="content/img/comparaison-concurrence.png" width="903" height="390" />
-                    </div>
-            </div><!-- /content -->
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #efficience-1 -->
-
-        <!-- Start of second page: #efficience-2 -->
-        <div data-role="page" class="sub-page" id="efficience-2" data-theme="b">
-        	<div data-role="header">
-			<div class="head-marquee">Efficience</div>
-				<h1>HyCare<sup>™</sup></h1>
-				<h2>optimise votre production.</h2>
-                <p><a href="#efficience" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-            		<h3>Le rendement énergétique de la technologie Moineau™.</h3>	
-                    <p>La technologie Moineau™ offre l'un des meilleurs rendements hydrauliques des pompes volumétriques grâce à un débit de fuite maîtrisé par le serrage entre rotor et stator.</p>
-                    
-                    <div class="ui-grid-a">
-                        <div class="ui-block-a">
-                            <div class="ui-bar ui-bar-e">
-                                <a href="#popup20m" data-rel="popup" data-position-to="window" data-transition="pop"><img src="content/img/hycare-vs-pompe-lobe-20m.jpg" width="242" height="174" /></a>
-                        		<div data-role="popup" id="popup20m" data-overlay-theme="a" data-theme="d" data-corners="false">
-    								<a href="#" data-rel="back" data-role="button" data-overlay-theme="a" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="content/img/hycare-vs-pompe-lobe-20m.jpg" width="484" height="348" alt="HyCare vs. Pompe à lobe">
-                            	</div>
-                            </div>
-                        </div>
-                        <div class="ui-block-b">
-                            <div class="ui-bar ui-bar-e">
-                                <a href="#popup5m" data-rel="popup" data-position-to="window" data-transition="pop"><img src="content/img/hycare-vs-pompe-lobe-5m.jpg" width="242" height="174" /></a>
-                        		<div data-role="popup" id="popup5m" data-overlay-theme="a" data-theme="d" data-corners="false">
-									<a href="#" data-rel="back" data-role="button" data-overlay-theme="a" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><img class="popphoto" src="content/img/hycare-vs-pompe-lobe-5m.jpg" width="484" height="348" alt="HyCare vs. Pompe à lobe">
-                        		</div>
-                            </div>
-                        </div>
-                    </div><!-- /grid-a -->
-                    <p class="center">Touchez l'image pour l'agrandir</p>
-                </div>
-            </div><!-- /content -->
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #efficience-2 -->
-
-        <!-- Start of second page: #efficience-3 -->
-        <div data-role="page" class="sub-page" id="efficience-3" data-theme="b">
-        	<div data-role="header">
-				<div class="head-marquee">Efficience</div>
-				<h1>HyCare<sup>™</sup></h1>
-				<h2>optimise votre production.</h2>
-                <p><a href="#efficience" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-            		<h3>Une efficience accrue</h3>
-                    <p>Le volume interne du corps de la pompe <em>HyCare™</em> est réduit au strict minimum grâce à son design optimisé.</p>
-                    <p>Ainsi le remplacement d'une pompe série H, 90H12, par une pompe <em>HyCare™</em>, 90HY12, peut générer une économie annuelle de 35550 €.</p>
-                    <div class="encart-image">
-                        <img src="content/img/comparatif-H-HY.png" width="689" height="114" alt="Comparatif pompe H et HyCare">
-                    </div>
-                    <p class="small">En partant du principe qu'en fin de production et malgré une pousse à l'eau, le volume du produit dans le corps de la pompe est dilué et donc non utilisé. Calculs avec 50 semaines de production par an, 2 pousses à l’eau ou NEP par jour, coût de produit pompé 3 € par kilo, densité 1,1.</p>
-                </div>
-            </div><!-- /content -->
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #efficience-3 -->
-
-        <!-- Start of second page: #efficience-4 -->
-        <div data-role="page" class="sub-page" id="efficience-4" data-theme="b">
-        	<div data-role="header">
-				<div class="head-marquee">Efficience</div>
-				<h1>HyCare<sup>™</sup></h1>
-				<h2>optimise votre production.</h2>
-                <p><a href="#efficience" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-            		<h3>Une fiabilité à toute épreuve</h3>
-                    <p>Système antirotation du stator (Breveté) : assure un fonctionnement sécurisé en cas de pression ou de température élevée.</p>
-                    <div class="encart-image">
-                        <img src="content/img/antirotation-stator.png" width="620" height="439" alt="Antirotation du stator">
-                    </div>
-                </div>
-            </div><!-- /content -->
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #efficience-4 -->
-
-        <!-- Start of second page: #efficience-5 -->
-        <div data-role="page" class="sub-page" id="efficience-5" data-theme="b">
-        	<div data-role="header">
-				<div class="head-marquee">Efficience</div>
-				<h1>HyCare<sup>™</sup></h1>
-				<h2>optimise votre production.</h2>
-                <p><a href="#efficience" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-            		<h3>Bielle flexible Duraflex</h3>
-                    <img src="content/img/logo-duraflex-3ans.png" width="190" height="111" style="float:right; margin-right:170px" />
-                    <ul>
-                      <li>Bielle en titane garantie 3 ans</li>
-                        <li>Pas d'articulation, pas de pièces d'usure</li>
-                        <li>Optimale pour le nettoyage (NEP)</li>
-                        <li>Aucune maintenance sur la bielle</li>
-                        <li>Système accouplement rapide</li>
-                        <li>Longueur réduite</li>
-                    </ul>
-                    <div class="encart-image">
-                        <img src="content/img/duraflex-ok-efficience.png" width="689" height="70" />
-                    </div>
-                    
-                    <p>Articulation ouverte</p>
-                    <img src="content/img/duraflex-bad-efficience.png" width="252" height="64" style="float:right; margin-right:170px" />
-                    <ul>
-                        <li>Nombre de pièces important</li>
-                        <li>Usure rapide due au manque de lubrification en NEP</li>
-                        <li>Rétention possible de produit</li>
-                    </ul>
-                    <a href="#efficience-5-popup" data-role="button" data-inline="true" data-rel="popup" data-position-to="window" class="link">Vidéo de démontage</a>
-                    <div data-role="popup" id="efficience-5-popup" class="ui-content" data-overlay-theme="a" data-theme="d" data-video-width="960" data-video-height="540" data-video-poster="content/video/25HY12fr.jpg" data-video-url="content/video/25HY12fr.mp4"></div>
-                </div>
-            </div><!-- /content -->
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #efficience-5 -->
-
-        <!-- Start of second page: #efficience-6 -->
-        <div data-role="page" class="sub-page" id="efficience-6" data-theme="b">
-        	<div data-role="header">
-				<div class="head-marquee">Efficience</div>
-				<h1>HyCare<sup>™</sup></h1>
-				<h2>optimise votre production.</h2>
-                <p><a href="#efficience" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-                <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>	
-            </div><!-- /header -->
-        
-            <div data-role="content" data-theme="a">
-                <div class="article">
-            		<h3>Maintenance simplifiée</h3>
-                    <div class="ui-grid-a">
-                        <div class="ui-block-a">
-                        	<div class="ui-bar ui-bar-e">
-                            	<div class="encart-image">
-                                	<img src="content/img/design13hy24.png" width="307" height="102" />
-                            	</div>
-                            	<p>Démontage<br />
-                            	<span class="small">Design 13HY24 à 90HY12</span></p>
-                            	<a href="#efficience-6-popup-1" data-role="button" data-inline="true" data-rel="popup" data-position-to="window" class="link">Voir la vidéo</a>
-                            	<div data-role="popup" id="efficience-6-popup-1" class="ui-content" data-overlay-theme="a" data-theme="d" data-video-width="960" data-video-height="540" data-video-poster="content/video/25HY12fr.jpg" data-video-url="content/video/25HY12fr.mp4"></div>
-                            </div>
-                        </div>
-                        <div class="ui-block-b">
-                        	<div class="ui-bar ui-bar-e">
-                                <div class="encart-image">
-                                    <img src="content/img/design05hy12.png" width="303" height="109" />
-                                </div>
-                                <p>Démontage<br />
-                                <span class="small">Design 05HY12 à 13HY12</span></p>
-                                <a href="#efficience-6-popup-2" data-role="button" data-inline="true" data-rel="popup" data-position-to="window" class="link">Voir la vidéo</a>
-                                <div data-role="popup" id="efficience-6-popup-2" class="ui-content" data-overlay-theme="a" data-theme="d" data-video-width="960" data-video-height="540" data-video-poster="content/video/13HY12fr.jpg" data-video-url="content/video/13HY12fr.mp4"></div>
-                            </div>
-                        </div>
-                    </div><!-- /grid-a -->
-                    <div class="fiche">
-                    </div>
-                </div>
-            </div><!-- /content -->
-            <div data-role="footer"></div><!-- /footer -->
-        </div><!-- /page #efficience-6 -->
-    
-
-        <!-- Start of second page: #marches -->
-<div data-role="page" class="sub-page" id="marches" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
-
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Industries et applications</h3>
-            <div class="ui-grid-c">
-                <div class="ui-block-a"><div class="ui-bar ui-bar-e">
-                    <a href="#produits-laitiers" data-role="button" data-transition="slide">
-                        <img src="content/img/produit-laitier.png" width="101" height="93" />
-                    </a>
-                    <ul class="applications">
-                        <li>Produits laitiers</li>
-                    </ul>
-                </div></div>
-                <div class="ui-block-b"><div class="ui-bar ui-bar-e">
-                    <a href="#viandes" data-role="button" data-transition="slide">
-                        <img src="content/img/viande-poisson.png" width="101" height="93" />
-                    </a>
-                    <ul class="applications">
-                        <li>Viandes</li>
-                        <li>Poissons</li>
-                        <li>Nutrition animale</li>
-                        <li>Ovoproduits</li>
-                    </ul>
-                </div></div>
-                <div class="ui-block-c"><div class="ui-bar ui-bar-e">
-                    <a href="#boulangerie" data-role="button" data-transition="slide">
-                        <img src="content/img/boulangerie.png" width="101" height="93" />
-                    </a>
-                    <ul class="applications">
-                        <li>Boulangerie</li>
-                        <li>Viennoiserie</li>
-                        <li>Pâtisserie</li>
-                    </ul>
-                </div></div>
-                <div class="ui-block-d"><div class="ui-bar ui-bar-e">
-                    <a href="#boissons" data-role="button" data-transition="slide">
-                        <img src="content/img/boisson.png" width="101" height="93" />
-                    </a>
-                    <ul class="applications">
-                        <li>Boissons</li>
-                    </ul>
-                </div></div>
-            </div><!-- /grid-c -->
-            <div class="ui-grid-c">
-                <div class="ui-block-a"><div class="ui-bar ui-bar-e">
-                    <a href="#plats-cuisines" data-role="button" data-transition="slide">
-                        <img src="content/img/plats-cuisines.png" width="101" height="93" />
-                    </a>
-                    <ul class="applications">
-                        <li>Plats cuisinés</li>
-                        <li>Sauce</li>
-                    </ul>
-                </div></div>
-                <div class="ui-block-b"><div class="ui-bar ui-bar-e">
-                    <a href="#fruits" data-role="button" data-transition="slide">
-                        <img src="content/img/fruit-legumes.png" width="101" height="93" />
-                    </a>
-                    <ul class="applications">
-                        <li>Fruits</li>
-                        <li>Légumes</li>
-                    </ul>
-                </div></div>
-                <div class="ui-block-c"><div class="ui-bar ui-bar-e">
-                    <a href="#cosmetique" data-role="button" data-transition="slide">
-                        <img src="content/img/cosmetique.png" width="101" height="93" />
-                    </a>
-                    <ul class="applications">
-                        <li>Cosmétique et pharmaceutique</li>
-                    </ul>
-                </div></div>
-            </div><!-- /grid-c -->
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
-
-
-<!-- Start of second page: #produits-laitiers -->
-<div data-role="page" class="sub-page" id="produits-laitiers" data-theme="b">
-    <div data-role="header">
-        <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#marches" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>   
-    </div><!-- /header -->
-    <div data-role="content" data-theme="a">
-        <div class="article-image"><img src="content/img/produit-laitier-fr.jpg" width="350" height="549" /></div>
-    </div>
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #produits-laitiers -->
-
-<!-- Start of second page: #viandes -->
-<div data-role="page" class="sub-page" id="viandes" data-theme="b">
-    <div data-role="header">
-        <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#marches" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>   
-    </div><!-- /header -->
-    <div data-role="content" data-theme="a">
-        <div class="article-image"><img src="content/img/viande-poisson-fr.jpg" width="350" height="549" /></div>
-    </div>
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #viandes -->
-
-<!-- Start of second page: #boulangerie -->
-<div data-role="page" class="sub-page" id="boulangerie" data-theme="b">
-    <div data-role="header">
-        <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#marches" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>   
-    </div><!-- /header -->
-    <div data-role="content" data-theme="a">
-        <div class="article-image"><img src="content/img/boulangerie-fr.jpg" width="350" height="549" /></div>
-    </div>
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #boulangerie -->
-
-<!-- Start of second page: #boissons -->
-<div data-role="page" class="sub-page" id="boissons" data-theme="b">
-    <div data-role="header">
-        <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#marches" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>   
-    </div><!-- /header -->
-    <div data-role="content" data-theme="a">
-        <div class="article-image"><img src="content/img/boisson-fr.jpg" width="350" height="549" /></div>
-    </div>
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #boissons -->
-
-<!-- Start of second page: #plats-cuisines -->
-<div data-role="page" class="sub-page" id="plats-cuisines" data-theme="b">
-    <div data-role="header">
-        <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#marches" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>   
-    </div><!-- /header -->
-    <div data-role="content" data-theme="a">
-        <div class="article-image"><img src="content/img/plats-cuisines-fr.jpg" width="350" height="549" /></div>
-    </div>
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #plats-cuisines -->
-
-<!-- Start of second page: #fruits -->
-<div data-role="page" class="sub-page" id="fruits" data-theme="b">
-    <div data-role="header">
-        <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#marches" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>   
-    </div><!-- /header -->
-    <div data-role="content" data-theme="a">
-        <div class="article-image"><img src="content/img/fruit-legumes-fr.jpg" width="350" height="549" /></div>
-    </div>
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #fruits -->
-
-<!-- Start of second page: #cosmetique -->
-<div data-role="page" class="sub-page" id="cosmetique" data-theme="b">
-    <div data-role="header">
-        <div class="head-marquee">Marchés</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#marches" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>   
-    </div><!-- /header -->
-    <div data-role="content" data-theme="a">
-        <div class="article-image"><img src="content/img/cosmetique-fr.jpg" width="350" height="549" /></div>
-    </div>
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page #cosmetique -->
-
-<!-- Start of second page: #options -->
-<div data-role="page" class="sub-page" id="options" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>Caractéristiques techniques</h2>
-        <h3>Design 13HY24 à 90HY12</h3>
-        <p><a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
-
-    <div data-role="content" data-theme="a">
-        <canvas id="option1" width="900" height="500"></canvas>
-        <img src="content/img/info.png" width="157" height="74" style="position:absolute; top: 693px; left: 276px;" /> 
-        <a href="#options-1" data-inline="true" data-role="button" data-transition="fade" data-theme="b" class="btn-back" style="display:block;width:362;height:173; position:absolute; z-index:100; top:588px; right:195px;"><img src="content/img/option-btn-05hy12.png" width="362" height="173" /></a>
-	</div><!-- /content -->
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
-
-<!-- Start of second page: #options-1 -->
-<div data-role="page" class="sub-page" id="options-1" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>Caractéristiques techniques</h2>
-        <h3>Design 05HY12 à 13HY12</h3>
-        <p><a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
-
-    <div data-role="content" data-theme="a">
-		<canvas id="option2" width="900" height="500"></canvas>
-        <img src="content/img/info.png" width="157" height="74" style="position:absolute; top: 693px; left: 276px;" /> 
-        <a href="#options" data-inline="true" data-role="button" data-transition="fade" data-theme="b" class="btn-back" style="display:block;width:362;height:173; position:absolute; z-index:100; top:588px; right:195px;"><img src="content/img/option-btn-13hy24.png" width="362" height="173" /></a>
-	</div><!-- /content -->
-    <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
-
-<!-- Start of second page: #antirotation -->
-<div data-role="page" class="sub-page" id="antirotation" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
-
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Une fiabilité à toute épreuve</h3>
-            <p>Système antirotation du stator (Breveté) : assure un fonctionnement sécurisé en cas de pression ou de température élevée.</p>
-            <div class="encart-image">
-                <img src="content/img/antirotation-stator.png" width="620" height="439" alt="Antirotation du stator">
+    <div class="sub-page" data-role="page" data-theme="b" id="securite-1">
+        <div data-role="header">
+            <div class="head-marquee">
+                Sécurité
             </div>
 
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>partenaire de vos engagements envers les consommateurs.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#securite"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <img src="content/img/logo-cfd.png" style=
+            "float:left; margin-left:10px;" width="100">
+
+            <div class="article">
+                <h3>LA CFD au service de l'hygiène.</h3>
+
+                <p>CFD : Computational Fluid Dynamic - simulation numérique des
+                fluides.</p>
+
+                <div class="encart-image"><img height="185" src=
+                "content/img/principeCFDlegende.png" width=
+                "754"></div><a class="link" data-inline="true"
+                data-position-to="window" data-rel="popup" data-role="button"
+                href="#securite-1-popup">Voir la vidéo</a>
+
+                <div class="ui-content" data-overlay-theme="a" data-role=
+                "popup" data-theme="d" data-video-height="540"
+                data-video-poster="content/video/PCM-HY_CFD.jpg"
+                data-video-url="content/video/PCM-HY_CFD.mp4" data-video-width=
+                "960" id="securite-1-popup"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #securite-1 -->
+    <!-- Start of second page: #securite-2 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="securite-2">
+        <div data-role="header">
+            <div class="head-marquee">
+                Sécurité
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#securite"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="60" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <img src="content/img/logo-duraflex-3ans.png" style=
+            "float:left; margin-left:10px;" width="100">
+
+            <div class="article">
+                <h3>Duraflex, la bielle flexible conçue pour le nettoyage en
+                place.</h3>
+
+                <p>Duraflex</p>
+
+                <ul>
+                    <li>Une seule pièce sans articulation</li>
+
+                    <li>Pas de zone de rétention possible du produit</li>
+
+                    <li>Optimisée pour le Nettoyage En Place</li>
+                </ul>
+
+                <div class="encart-image"><img height="39" src=
+                "content/img/duraflexOk.png" width="535"></div>
+
+                <p>Articulation ouverte</p>
+
+                <ul>
+                    <li>Zone de rétention possible dans l'articulation</li>
+
+                    <li>Largage possible de particules dû à l'usure des
+                    pièces</li>
+                </ul>
+
+                <div class="encart-image"><img height="67" src=
+                "content/img/duraflexBad.png" width="535"></div><a class="link"
+                data-role="button" data-transition="slide" href=
+                "#securite-3">Voir les vidéos de démontage</a>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #securite-2 -->
+    <!-- Start of second page: #securite-3 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="securite-3">
+        <div data-role="header">
+            <div class="head-marquee">
+                Sécurité
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#securite-2"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Maintenance simplifiée</h3>
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <div class="encart-image"><img height="102" src=
+                            "content/img/design13hy24.png" width="307"></div>
+
+                            <p>Démontage<br>
+                            <span class="small">Design 13HY24 à
+                            90HY12</span></p><a class="link" data-inline="true"
+                            data-position-to="window" data-rel="popup"
+                            data-role="button" href=
+                            "#efficience-6-popup-1">Voir la vidéo</a>
+
+                            <div class="ui-content" data-overlay-theme="a"
+                            data-role="popup" data-theme="d" data-video-height=
+                            "540" data-video-poster=
+                            "content/video/25HY12fr.jpg" data-video-url=
+                            "content/video/25HY12fr.mp4" data-video-width="960"
+                            id="efficience-6-popup-1"></div>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <div class="encart-image"><img height="109" src=
+                            "content/img/design05hy12.png" width="303"></div>
+
+                            <p>Démontage<br>
+                            <span class="small">Design 05HY12 à
+                            13HY12</span></p><a class="link" data-inline="true"
+                            data-position-to="window" data-rel="popup"
+                            data-role="button" href=
+                            "#efficience-6-popup-2">Voir la vidéo</a>
+
+                            <div class="ui-content" data-overlay-theme="a"
+                            data-role="popup" data-theme="d" data-video-height=
+                            "540" data-video-poster=
+                            "content/video/13HY12fr.jpg" data-video-url=
+                            "content/video/13HY12fr.mp4" data-video-width="960"
+                            id="efficience-6-popup-2"></div>
+                        </div>
+                    </div>
+                </div><!-- /grid-a -->
+
+                <div class="fiche"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #securite-3 -->
+    <!-- Start of second page: #efficience -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="efficience">
+        <div data-role="header">
+            <div class="head-marquee">
+                Efficience
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-home" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3><em>HyCare™</em> optimise votre production.</h3>
+
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#efficience-1"><img height="128" src=
+                            "content/img/efficience-m1.jpg" width="128">Gain de
+                            place</a>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#efficience-2"><img height="128" src=
+                            "content/img/efficience-m2.jpg" width=
+                            "128">Rendement énergétique</a>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#efficience-3"><img height="128" src=
+                            "content/img/efficience-m3.jpg" width=
+                            "128">Gains</a>
+                        </div>
+                    </div>
+                </div><!-- /grid-b -->
+
+                <h3>Une fiabilité à toute épreuve.</h3>
+
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#efficience-4"><img height="128" src=
+                            "content/img/efficience-m4.jpg" width="128">Système
+                            anti rotation du stator</a>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#efficience-5"><img height="128" src=
+                            "content/img/efficience-m5.jpg" width="128">Bielle
+                            flexible en titane Duraflex</a>
+                        </div>
+                    </div>
+                </div><!-- /grid-b -->
+
+                <h3>Maintenance simplifiée.</h3>
+
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#efficience-6"><img height="128" src=
+                            "content/img/efficience-m6.jpg" width=
+                            "128">Démontage</a>
+                        </div>
+                    </div>
+                </div><!-- /grid-b -->
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page efficience -->
+    <!-- Start of second page: #efficience-1 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="efficience-1">
+        <div data-role="header">
+            <div class="head-marquee">
+                Efficience
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#efficience"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3><em>HyCare™</em>, la pompe à vis excentrée hygiénique la
+                plus courte du marché.</h3>
+
+                <p>Equipée de la nouvelle bielle Duraflex, l'<em>HyCare™</em>
+                est 20% plus courte. Cela diminue sensiblement les coûts
+                d'intégration et de transport.</p>
+            </div>
+
+            <div class="encart-image"><img height="390" src=
+            "content/img/comparaison-concurrence.png" width="903"></div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #efficience-1 -->
+    <!-- Start of second page: #efficience-2 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="efficience-2">
+        <div data-role="header">
+            <div class="head-marquee">
+                Efficience
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#efficience"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Le rendement énergétique de la technologie Moineau™.</h3>
+
+                <p>La technologie Moineau™ offre l'un des meilleurs rendements
+                hydrauliques des pompes volumétriques grâce à un débit de fuite
+                maîtrisé par le serrage entre rotor et stator.</p>
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-position-to="window" data-rel="popup"
+                            data-transition="pop" href="#popup20m"><img height=
+                            "174" src=
+                            "content/img/hycare-vs-pompe-lobe-20m.jpg" width=
+                            "242"></a>
+
+                            <div data-corners="false" data-overlay-theme="a"
+                            data-role="popup" data-theme="d" id="popup20m">
+                            <a class="ui-btn-right" data-icon="delete"
+                            data-iconpos="notext" data-overlay-theme="a"
+                            data-rel="back" data-role="button" data-theme="a"
+                            href="#">Close</a><img alt=
+                            "HyCare vs. Pompe à lobe" class="popphoto" height=
+                            "348" src=
+                            "content/img/hycare-vs-pompe-lobe-20m.jpg" width=
+                            "484"></div>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-position-to="window" data-rel="popup"
+                            data-transition="pop" href="#popup5m"><img height=
+                            "174" src="content/img/hycare-vs-pompe-lobe-5m.jpg"
+                            width="242"></a>
+
+                            <div data-corners="false" data-overlay-theme="a"
+                            data-role="popup" data-theme="d" id="popup5m">
+                            <a class="ui-btn-right" data-icon="delete"
+                            data-iconpos="notext" data-overlay-theme="a"
+                            data-rel="back" data-role="button" data-theme="a"
+                            href="#">Close</a><img alt=
+                            "HyCare vs. Pompe à lobe" class="popphoto" height=
+                            "348" src="content/img/hycare-vs-pompe-lobe-5m.jpg"
+                            width="484"></div>
+                        </div>
+                    </div>
+                </div><!-- /grid-a -->
+
+                <p class="center">Touchez l'image pour l'agrandir</p>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #efficience-2 -->
+    <!-- Start of second page: #efficience-3 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="efficience-3">
+        <div data-role="header">
+            <div class="head-marquee">
+                Efficience
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#efficience"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Une efficience accrue</h3>
+
+                <p>Le volume interne du corps de la pompe <em>HyCare™</em> est
+                réduit au strict minimum grâce à son design optimisé.</p>
+
+                <p>Ainsi le remplacement d'une pompe série H, 90H12, par une
+                pompe <em>HyCare™</em>, 90HY12, peut générer une économie
+                annuelle de 35550 €.</p>
+
+                <div class="encart-image"><img alt=
+                "Comparatif pompe H et HyCare" height="114" src=
+                "content/img/comparatif-H-HY.png" width="689"></div>
+
+                <p class="small">En partant du principe qu'en fin de production
+                et malgré une pousse à l'eau, le volume du produit dans le
+                corps de la pompe est dilué et donc non utilisé. Calculs avec
+                50 semaines de production par an, 2 pousses à l’eau ou NEP par
+                jour, coût de produit pompé 3 € par kilo, densité 1,1.</p>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #efficience-3 -->
+    <!-- Start of second page: #efficience-4 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="efficience-4">
+        <div data-role="header">
+            <div class="head-marquee">
+                Efficience
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#efficience"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Une fiabilité à toute épreuve</h3>
+
+                <p>Système antirotation du stator (Breveté) : assure un
+                fonctionnement sécurisé en cas de pression ou de température
+                élevée.</p>
+
+                <div class="encart-image"><img alt="Antirotation du stator"
+                height="439" src="content/img/antirotation-stator.png" width=
+                "620"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #efficience-4 -->
+    <!-- Start of second page: #efficience-5 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="efficience-5">
+        <div data-role="header">
+            <div class="head-marquee">
+                Efficience
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#efficience"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Bielle flexible Duraflex</h3><img height="111" src=
+                "content/img/logo-duraflex-3ans.png" style=
+                "float:right; margin-right:170px" width="190">
+
+                <ul>
+                    <li>Bielle en titane garantie 3 ans</li>
+
+                    <li>Pas d'articulation, pas de pièces d'usure</li>
+
+                    <li>Optimale pour le nettoyage (NEP)</li>
+
+                    <li>Aucune maintenance sur la bielle</li>
+
+                    <li>Système accouplement rapide</li>
+
+                    <li>Longueur réduite</li>
+                </ul>
+
+                <div class="encart-image"><img height="70" src=
+                "content/img/duraflex-ok-efficience.png" width="689"></div>
+
+                <p>Articulation ouverte</p><img height="64" src=
+                "content/img/duraflex-bad-efficience.png" style=
+                "float:right; margin-right:170px" width="252">
+
+                <ul>
+                    <li>Nombre de pièces important</li>
+
+                    <li>Usure rapide due au manque de lubrification en NEP</li>
+
+                    <li>Rétention possible de produit</li>
+                </ul><a class="link" data-inline="true" data-position-to=
+                "window" data-rel="popup" data-role="button" href=
+                "#efficience-5-popup">Vidéo de démontage</a>
+
+                <div class="ui-content" data-overlay-theme="a" data-role=
+                "popup" data-theme="d" data-video-height="540"
+                data-video-poster="content/video/25HY12fr.jpg" data-video-url=
+                "content/video/25HY12fr.mp4" data-video-width="960" id=
+                "efficience-5-popup"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #efficience-5 -->
+    <!-- Start of second page: #efficience-6 -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="efficience-6">
+        <div data-role="header">
+            <div class="head-marquee">
+                Efficience
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>optimise votre production.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#efficience"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Maintenance simplifiée</h3>
+
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <div class="encart-image"><img height="102" src=
+                            "content/img/design13hy24.png" width="307"></div>
+
+                            <p>Démontage<br>
+                            <span class="small">Design 13HY24 à
+                            90HY12</span></p><a class="link" data-inline="true"
+                            data-position-to="window" data-rel="popup"
+                            data-role="button" href=
+                            "#efficience-6-popup-1">Voir la vidéo</a>
+
+                            <div class="ui-content" data-overlay-theme="a"
+                            data-role="popup" data-theme="d" data-video-height=
+                            "540" data-video-poster=
+                            "content/video/25HY12fr.jpg" data-video-url=
+                            "content/video/25HY12fr.mp4" data-video-width="960"
+                            id="efficience-6-popup-1"></div>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <div class="encart-image"><img height="109" src=
+                            "content/img/design05hy12.png" width="303"></div>
+
+                            <p>Démontage<br>
+                            <span class="small">Design 05HY12 à
+                            13HY12</span></p><a class="link" data-inline="true"
+                            data-position-to="window" data-rel="popup"
+                            data-role="button" href=
+                            "#efficience-6-popup-2">Voir la vidéo</a>
+
+                            <div class="ui-content" data-overlay-theme="a"
+                            data-role="popup" data-theme="d" data-video-height=
+                            "540" data-video-poster=
+                            "content/video/13HY12fr.jpg" data-video-url=
+                            "content/video/13HY12fr.mp4" data-video-width="960"
+                            id="efficience-6-popup-2"></div>
+                        </div>
+                    </div>
+                </div><!-- /grid-a -->
+
+                <div class="fiche"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #efficience-6 -->
+    <!-- Start of second page: #marches -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="marches">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-home" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Industries et applications</h3>
+
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#produits-laitiers"><img height="93" src=
+                            "content/img/produit-laitier.png" width="101"></a>
+
+                            <ul class="applications">
+                                <li>Produits laitiers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#viandes"><img height="93" src=
+                            "content/img/viande-poisson.png" width="101"></a>
+
+                            <ul class="applications">
+                                <li>Viandes</li>
+
+                                <li>Poissons</li>
+
+                                <li>Nutrition animale</li>
+
+                                <li>Ovoproduits</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#boulangerie"><img height="93" src=
+                            "content/img/boulangerie.png" width="101"></a>
+
+                            <ul class="applications">
+                                <li>Boulangerie</li>
+
+                                <li>Viennoiserie</li>
+
+                                <li>Pâtisserie</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#boissons"><img height="93" src=
+                            "content/img/boisson.png" width="101"></a>
+
+                            <ul class="applications">
+                                <li>Boissons</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- /grid-c -->
+
+                <div class="ui-grid-c">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#plats-cuisines"><img height="93" src=
+                            "content/img/plats-cuisines.png" width="101"></a>
+
+                            <ul class="applications">
+                                <li>Plats cuisinés</li>
+
+                                <li>Sauces</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#fruits"><img height="93" src=
+                            "content/img/fruit-legumes.png" width="101"></a>
+
+                            <ul class="applications">
+                                <li>Fruits</li>
+
+                                <li>Légumes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-e">
+                            <a data-role="button" data-transition="slide" href=
+                            "#cosmetique"><img height="93" src=
+                            "content/img/cosmetique.png" width="101"></a>
+
+                            <ul class="applications">
+                                <li>Cosmétique et pharmaceutique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- /grid-c -->
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #produits-laitiers -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id=
+    "produits-laitiers">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#marches"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article-image"><img height="549" src=
+            "content/img/produit-laitier-fr.jpg" width="350"></div>
         </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
 
-<!-- Start of second page: #stator -->
-<div data-role="page" class="sub-page" id="stator" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #produits-laitiers -->
+    <!-- Start of second page: #viandes -->
 
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3><strong>Stators en élastomère alimentaire</strong><br>conçus et fabriqués par PCM.</h3>
-            <p>La garantie d'une résistance et d'une sécurité alimentaire inégalées.</p>
-            <p>
-                NBR Clair : 1935/2004 EU<br>
+    <div class="sub-page" data-role="page" data-theme="b" id="viandes">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#marches"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article-image"><img height="549" src=
+            "content/img/viande-poisson-fr.jpg" width="350"></div>
+        </div>
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #viandes -->
+    <!-- Start of second page: #boulangerie -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="boulangerie">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#marches"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article-image"><img height="549" src=
+            "content/img/boulangerie-fr.jpg" width="350"></div>
+        </div>
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #boulangerie -->
+    <!-- Start of second page: #boissons -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="boissons">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#marches"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article-image"><img height="549" src=
+            "content/img/boisson-fr.jpg" width="350"></div>
+        </div>
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #boissons -->
+    <!-- Start of second page: #plats-cuisines -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="plats-cuisines">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#marches"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article-image"><img height="549" src=
+            "content/img/plats-cuisines-fr.jpg" width="350"></div>
+        </div>
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #plats-cuisines -->
+    <!-- Start of second page: #fruits -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="fruits">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#marches"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article-image"><img height="549" src=
+            "content/img/fruit-legumes-fr.jpg" width="350"></div>
+        </div>
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #fruits -->
+    <!-- Start of second page: #cosmetique -->
+
+    <div class="sub-page" data-role="page" data-theme="b" id="cosmetique">
+        <div data-role="header">
+            <div class="head-marquee">
+                Marchés
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>dans toutes les filières de l'agro-alimentaire.</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#marches"><img height="65" src="content/img/btn-back.png" width=
+            "69"></a> <a class="btn-home" data-direction="reverse" data-inline=
+            "true" data-role="button" data-theme="b" data-transition="slide"
+            href="#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article-image"><img height="549" src=
+            "content/img/cosmetique-fr.jpg" width="350"></div>
+        </div>
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page #cosmetique -->
+    <!-- Start of second page: #options -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="options">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <h3>Design 13HY24 à 90HY12</h3>
+
+            <p><a class="btn-home" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <canvas height="500" id="option1" width="900"></canvas>
+            <img height="74" src="content/img/info.png" style=
+            "position:absolute; top: 682px; left: 276px;" width="157">
+            <a class="btn-back" data-inline="true" data-role="button"
+            data-theme="b" data-transition="fade" href="#options-1" style=
+            "display:block;width:362;height:173; position:absolute; z-index:100; top:565px; right:195px;">
+            <img height="173" src="content/img/option-btn-05hy12.png" width=
+            "362"></a>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #options-1 -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="options-1">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <h3>Design 05HY12 à 13HY12</h3>
+
+            <p><a class="btn-home" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <canvas height="500" id="option2" width="900"></canvas>
+            <img height="74" src="content/img/info.png" style=
+            "position:absolute; top: 682px; left: 276px;" width="157">
+            <a class="btn-back" data-inline="true" data-role="button"
+            data-theme="b" data-transition="fade" href="#options" style=
+            "display:block;width:362;height:173; position:absolute; z-index:100; top:565px; right:195px;">
+            <img height="173" src="content/img/option-btn-13hy24.png" width=
+            "362"></a>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #antirotation -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="antirotation">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Une fiabilité à toute épreuve</h3>
+
+                <p>Système antirotation du stator (Breveté) : assure un
+                fonctionnement sécurisé en cas de pression ou de températures
+                élevées.</p>
+
+                <div class="encart-image"><img alt="Antirotation du stator"
+                height="439" src="content/img/antirotation-stator.png" width=
+                "620"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #stator -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="stator">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3><strong>Stators en élastomère alimentaire</strong><br>
+                conçus et fabriqués par PCM.</h3>
+
+                <p>La garantie d'une résistance et d'une sécurité alimentaire
+                inégalées.</p>
+
+                <p>NBR Clair : 1935/2004 EU<br>
                 FKM CLair : FDA et 3-A<br>
-                NBR Noir : USP
-            </p>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
+                NBR Noir : USP</p>
+            </div>
+        </div><!-- /content -->
 
-<!-- Start of second page: #corps-optimise -->
-<div data-role="page" class="sub-page" id="corps-optimise" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #corps-optimise -->
 
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Conception du corps optimisée</h3>
-            <p>
-                Conception du corps optimisée avec la technologie CFD pour améliorer l'effet du nettoyage et réduire les pertes de produit. En inox 316L, il est conçu en deux parties pour faciliter la maintenance.
-            </p>
-            <img src="content/img/option1-3.png" width="748" height="198" />
-            <p>
-                <a href="#video-corps-optimise" data-role="button" data-inline="true" data-rel="popup" data-position-to="window" class="link">Voir la vidéo</a>
-                <div data-role="popup" id="video-corps-optimise" class="ui-content" data-overlay-theme="a" data-theme="d" data-video-width="960" data-video-height="540" data-video-poster="content/video/PCM-HY_CFD.jpg" data-video-url="content/video/PCM-HY_CFD.mp4"></div>
-            </p>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
+    <div class="sub-page" data-role="page" data-theme="a" id="corps-optimise">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
 
-<!-- Start of second page: #garniture -->
-<div data-role="page" class="sub-page" id="garniture" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
+            <h1>HyCare<sup>™</sup></h1>
 
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Garniture mécanique hygiénique en cartouche</h3>
-            <p>Conçue sans vis ou ressort apparent et à proximité de l'entrée du NEP pour un nettoyage optimal.<br>Remplacement rapide et sans réglage par l'arrière.</p>
-            <div style="background-color: rgb(255, 255, 255); position: relative; overflow: hidden; height: 298px; width: 640px;">
-                <div id="Stage" class="option4-garniture">
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Conception du corps optimisée</h3>
+
+                <p>Conception du corps optimisée avec la technologie CFD pour
+                améliorer l'effet du nettoyage et réduire les pertes de
+                produit. En inox 316L, il est conçu en deux parties pour
+                faciliter la maintenance.</p><img height="198" src=
+                "content/img/option1-3.png" width="748">
+
+                <p><a class="link" data-inline="true" data-position-to="window"
+                data-rel="popup" data-role="button" href=
+                "#video-corps-optimise">Voir la vidéo</a></p>
+
+                <div class="ui-content" data-overlay-theme="a" data-role=
+                "popup" data-theme="d" data-video-height="540"
+                data-video-poster="content/video/PCM-HY_CFD.jpg"
+                data-video-url="content/video/PCM-HY_CFD.mp4" data-video-width=
+                "960" id="video-corps-optimise"></div>
+                <p>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #garniture -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="garniture">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Garniture mécanique hygiénique en cartouche</h3>
+
+                <p>Conçue sans vis ou ressort apparent et à proximité de
+                l'entrée du NEP pour un nettoyage optimal.<br>
+                Remplacement rapide et sans réglage par l'arrière.</p>
+
+                <div id="garniture-animation-container"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #bielle-flexible -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="bielle-flexible">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Bielle flexible en Titane Duraflex</h3><img height="111"
+                src="content/img/logo-duraflex-3ans.png" style=
+                "float:right; margin-right:170px" width="190">
+
+                <ul>
+                    <li>Longueur réduite</li>
+
+                    <li>Optimisation du nettoyage</li>
+
+                    <li>Pas de zone de rétention</li>
+
+                    <li>Pas de maintenance, pas d'articulation</li>
+
+                    <li>Temps de démontage plus court</li>
+
+                    <li>(Corps en 2 parties, assembalge bielle rotor).</li>
+                </ul>
+
+                <div class="encart-image"><img height="70" src=
+                "content/img/duraflex-ok-efficience.png" width=
+                "689"></div><img height="64" src=
+                "content/img/duraflex-bad-efficience.png" style=
+                "float:right; margin-right:170px" width="252">
+
+                <p><a class="link" data-inline="true" data-position-to="window"
+                data-rel="popup" data-role="button" href=
+                "#video-bielle-flexible">Lien vers le démontage</a></p>
+
+                <div class="ui-content" data-overlay-theme="a" data-role=
+                "popup" data-theme="d" data-video-height="540"
+                data-video-poster="content/video/25HY12fr.jpg" data-video-url=
+                "content/video/25HY12fr.mp4" data-video-width="960" id=
+                "video-bielle-flexible"></div>
+                <p>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #pipe-excentrique -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id=
+    "pipe-excentrique">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3><strong>Pipe excentrique</strong><br>
+                évite toute rétention de produit.</h3>
+
+                <p>3 configurations possibles :</p>
+
+                <div class="encart-image"><img height="405" src=
+                "content/img/option1-7.png" width="708"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #socle-reglable -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="socle-reglable">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Socle avec pieds réglables</h3>
+
+                <div class="encart-image"><img height="367" src=
+                "content/img/option1-8.png" width="738"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #tubulure -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="tubulure">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Tubulure de nettoyage</h3>
+
+                <div class="encart-image"><img height="301" src=
+                "content/img/option1-9.png" width="500"></div>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #capotage -->
+
+    <div class="sub-page" data-role="page" data-theme="a" id="capotage">
+        <div data-role="header">
+            <div class="head-marquee">
+                Options
+            </div>
+
+            <h1>HyCare<sup>™</sup></h1>
+
+            <h2>Caractéristiques techniques</h2>
+
+            <p><a class="btn-back" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" onclick=
+            "history.go(-1)"><img height="65" src="content/img/btn-back.png"
+            width="69"></a> <a class="btn-home" data-direction="reverse"
+            data-inline="true" data-role="button" data-theme="b"
+            data-transition="slide" href="#home"><img height="55" src=
+            "content/img/btn-home.png" width="69"></a></p>
+        </div><!-- /header -->
+
+        <div data-role="content" data-theme="a">
+            <div class="article">
+                <h3>Capotage de l'entrainement (option)</h3>
+
+                <div id="capotage-animation-container">
+                    <div class="sub-img"></div>
                 </div>
             </div>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
+        </div><!-- /content -->
 
-<!-- Start of second page: #bielle-flexible -->
-<div data-role="page" class="sub-page" id="bielle-flexible" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <!-- Start of second page: #contact -->
 
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Bielle flexible en Titane Duraflex</h3>
-            <img src="content/img/logo-duraflex-3ans.png" width="190" height="111" style="float:right; margin-right:170px" />
-            <ul>
-                <li>Longueur réduite</li>
-                <li>Optimisation du nettoyage</li>
-                <li>Pas de zone de rétention</li>
-                <li>Pas de maintenance, pas d'articulation</li>
-                <li>Temps de démontage plus court</li>
-                <li>(Corps en 2 parties, assembalge bielle rotor).</li>
-            </ul>
-            <div class="encart-image"><img src="content/img/duraflex-ok-efficience.png" width="689" height="70"></div>
-            <img src="content/img/duraflex-bad-efficience.png" width="252" height="64" style="float:right; margin-right:170px">
-            <p><a href="#video-bielle-flexible" data-role="button" data-inline="true" data-rel="popup" data-position-to="window" class="link">Lien vers le démontage</a>
-			<div data-role="popup" id="video-bielle-flexible" class="ui-content" data-overlay-theme="a" data-theme="d" data-video-width="960" data-video-height="540" data-video-poster="content/video/25HY12fr.jpg" data-video-url="content/video/25HY12fr.mp4"></div></p>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
+    <div class="sub-page" data-role="page" data-theme="a" id="contact">
+        <div data-role="header">
+            <h1>HyCare<sup>™</sup> préserve le fruit de votre travail</h1>
 
-<!-- Start of second page: #pipe-excentrique -->
-<div data-role="page" class="sub-page" id="pipe-excentrique" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
+            <p><a class="btn-home" data-direction="reverse" data-inline="true"
+            data-role="button" data-theme="b" data-transition="slide" href=
+            "#home"><img height="55" src="content/img/btn-home.png" width=
+            "69"></a></p>
+        </div><!-- /header -->
 
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3><strong>Pipe excentrique</strong><br>évite toute rétention de produit.</h3>
-            <p>3 configurations possibles :</p>
-            <div class="encart-image"><img src="content/img/option1-7.png" width="708" height="405"></div>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
+        <div data-role="content" data-theme="a">
+            <div class="ui-grid-c contact-grid">
+                <div class="ui-block-a">
+                    <div class="ui-block-content">
+                        <h2>PCM AMERIQUES</h2>
 
-<!-- Start of second page: #socle-reglable -->
-<div data-role="page" class="sub-page" id="socle-reglable" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
+                        <p>USA, Houston</p>
 
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Socle avec pieds réglables</h3>
-            <div class="encart-image"><img src="content/img/option1-8.png" width="738" height="367"></div>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
+                        <p>+1 713-896-4888</p>
 
-<!-- Start of second page: #tubulure -->
-<div data-role="page" class="sub-page" id="tubulure" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
-
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Tubulure de nettoyage</h3>
-            <div class="encart-image"><img src="content/img/option1-9.png" width="500" height="301"></div>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
-
-<!-- Start of second page: #capotage -->
-<div data-role="page" class="sub-page" id="capotage" data-theme="a"><div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a onclick="history.go(-1)" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-back.png" width="69" height="65" /></a>
-        <a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
-
-    <div data-role="content" data-theme="a">
-        <div class="article">
-            <h3>Capotage de l'entrainement (option)</h3>
-            <div style="background:url(content/edge/images/option10-pompe.png) no-repeat left top; position: relative; overflow: hidden; width: 717px; height: 425px;">
-                <div id="Stage10" class="option10">
+                        <p><a href=
+                        "mailto:pcmusa@pcmusa-inc.com">pcmusa@pcmusa-inc.com</a></p>
+                    </div>
                 </div>
-            </div>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
-<!-- Start of second page: #contact -->
-<div data-role="page" class="sub-page" id="contact" data-theme="a"> <div data-role="header">
-    <div class="head-marquee">Options</div>
-        <h1>HyCare<sup>™</sup></h1>
-        <h2>respecte la qualité et la texture de vos produits</h2>
-        <p><a href="#home" class="btn-home" data-inline="true" data-direction="reverse" data-role="button" data-transition="slide" data-theme="b" class="btn-back"><img src="content/img/btn-home.png" width="69" height="55" /></a></p>
-    </div><!-- /header -->
 
-    <div data-role="content" data-theme="a">
-        <div class="ui-grid-c contact-grid">
-            <div class="ui-block-a">
-                <div class="ui-block-content">
-                    <h2>PCM AMERIQUES</h2>
-                    <p>USA, Houston</p>
-                    <p>+1 713-896-4888</p>
-                    <p><a href="mailto:pcmusa@pcmusa-inc.com">pcmusa@pcmusa-inc.com</a></p>
-                </div></div>
-            <div class="ui-block-b">
-                <div class="ui-block-content">
-                    <h2>PCM EUROPE</h2>
-                    <p>France, Champtocé-sur-Loire</p>
-                    <p>+33(0)1 41 08 15 15</p>
-                    <p><a href="mailto:contact@pcm.eu">contact@pcm.eu</a></p>     
-                </div>
-            </div>
-            <div class="ui-block-c">
-                <div class="ui-block-content">
-                    <h2>PCM MOYEN-ORIENT</h2>
-                    <p>Emirats Arabes Unis, Bubai</p>
-                    <p>+971 4 2048 848</p>
-                    <p><a href="mailto:contact@pcm.eu">contact@pcm.eu</a></p>              
-                </div>
-            </div>
-            <div class="ui-block-d">
-                <div class="ui-block-content">
-                    <h2>PCM ASIE</h2>
-                    <p>Chine, Shanghai</p>
-                    <p>+86(0)21 62362521</p>
-                    <p><a href="mailto:pcmchina@pcm.eu">pcmchina@pcm.eu</a></p> 
-                </div>
-            </div>
-        </div><!-- /grid-c -->
-        <div class="website-url">
-            <p><a href="http://www.pcm.eu/">http://www.pcm.eu</a></p>
-        </div>
-  </div><!-- /content -->
-      <div data-role="footer"></div><!-- /footer -->
-</div><!-- /page two -->
+                <div class="ui-block-b">
+                    <div class="ui-block-content">
+                        <h2>PCM EUROPE</h2>
 
-<script src="phonegap.js"></script>
+                        <p>France, Champtocé-sur-Loire</p>
+
+                        <p>+33(0)1 41 08 15 15</p>
+
+                        <p><a href=
+                        "mailto:contact@pcm.eu">contact@pcm.eu</a></p>
+                    </div>
+                </div>
+
+                <div class="ui-block-c">
+                    <div class="ui-block-content">
+                        <h2>PCM MOYEN-ORIENT</h2>
+
+                        <p>Emirats Arabes Unis, Bubai</p>
+
+                        <p>+971 4 2048 848</p>
+
+                        <p><a href=
+                        "mailto:contact@pcm.eu">contact@pcm.eu</a></p>
+                    </div>
+                </div>
+
+                <div class="ui-block-d">
+                    <div class="ui-block-content">
+                        <h2>PCM ASIE</h2>
+
+                        <p>Chine, Shanghai</p>
+
+                        <p>+86(0)21 62362521</p>
+
+                        <p><a href=
+                        "mailto:pcmchina@pcm.eu">pcmchina@pcm.eu</a></p>
+                    </div>
+                </div>
+            </div><!-- /grid-c -->
+
+            <div class="website-url">
+                <p><a href="http://www.pcm.eu/" target=
+                "_blank">http://www.pcm.eu</a></p>
+            </div>
+        </div><!-- /content -->
+
+        <div data-role="footer"></div><!-- /footer -->
+    </div><!-- /page two -->
+    <script src="phonegap.js"></script>
 </body>
 </html>

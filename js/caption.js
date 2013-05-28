@@ -10,14 +10,14 @@
 
 		var line_settings = {
 			layer: true,
-			name: 'badges',
+			group: 'badges',
 			strokeStyle: '#000066',
 			strokeWidth: 1
 		}, points;
 
 		for (points = 0; points < params.linePoints.length; points++) {
-			line_settings['x'+(points+1)] = params.linePoints[points][0];
-			line_settings['y'+(points+1)] = params.linePoints[points][1];
+			line_settings['x' + (points + 1)] = params.linePoints[points][0];
+			line_settings['y' + (points + 1)] = params.linePoints[points][1];
 		}
 		$(this).drawLine(line_settings);
 
@@ -31,7 +31,7 @@
 
 		$(this).drawEllipse({
 			layer: true,
-			name: 'badges',
+			group: 'badges',
 			fillStyle: badgeFillStyle,
 			x: params.linePoints[0][0], y: params.linePoints[0][1],
 			width: 40, height: 40,
@@ -48,7 +48,7 @@
 
 		$(this).drawText({
 			layer: true,
-			name: 'badges',
+			group: 'badges',
 			fillStyle: colorBadgeText,
 			x: params.linePoints[0][0], y: params.linePoints[0][1],
 			text: params.number,
@@ -67,7 +67,7 @@
 
 		$(this).drawText({
 			layer: true,
-			name: 'badges',
+			group: 'badges',
 			fillStyle: "#000066",
 			x: params.linePoints[0][0] + 30, y: params.linePoints[0][1] - 20,
 			text: params.text,

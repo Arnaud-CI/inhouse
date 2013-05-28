@@ -1,4 +1,75 @@
 $(function() {
+	var pos = [];
+    var star_init_x = 277;
+
+    $('#home div[data-role=content] a').each(function() {
+        pos.push($(this).offset());
+    });
+
+    $('#home #intro .star').each(function() {
+        $(this).css('left', star_init_x + 'px');
+        star_init_x = star_init_x + 80;
+    });
+
+    $('#home > div:not(#intro, [data-role="header"])').hide();
+    $('#home > div[data-role="header"] h1 span:first-child').css('opacity', '1');
+    
+    setTimeout(function() {
+        $('#home > div[data-role="header"] h1 span:nth-child(2)').css('opacity', '1');
+    }, 1500);
+
+    setTimeout(function() {
+        $('#home #intro #plate').fadeIn(1500);
+        $('#home #intro #hand').fadeIn(1500, function() {
+            $('#home #intro #plate #title').show();
+            $('#home #intro .star').css('opacity', '1');
+            $('#home #intro #hand').addClass('rotate');
+
+            setTimeout(function() {
+                  $('#home #intro .star').each(function() {
+                    if($(this).index() > 2) {
+                        $(this).toggleClass('reducing2', 3000);
+                    } else {
+                        $(this).toggleClass('reducing1', 3000);
+                    }
+
+                    $('#home #intro #hand').css('opacity', '0');
+                    $('#home #intro #plate').animate({
+                        opacity: '0',
+                        top: '555px'
+                    }, 2500, 'easeInQuad');
+
+                    $('#home > div[data-role="header"] h1 span:last-child').css('opacity', '1');
+
+                    $(this).animate({
+                        left: pos[$(this).index()].left + 'px',
+                        top: pos[$(this).index()].top + 'px'
+                    }, 3000, 'easeInOutExpo', function() {
+                        if($(this).index() == $(this).length - 1)
+                        {
+                            $('#home > div:not([data-role="header"])').fadeToggle(1500);
+
+                        }
+                    });
+                });
+            }, 2000);
+        });
+    }, 1500);
+
+	function require(script) {
+	    $.ajax({
+	        url: script,
+	        dataType: "script",
+	        async: false,
+	        success: function () {
+	            // all good...
+	        },
+	        error: function () {
+	            throw new Error("Could not load script " + script);
+	        }
+	    });
+	}
+
 	$('#option1').caption({
 		number: 1,
 		linePoints: [[30, 150], [30, 200], [130, 270]],
@@ -108,19 +179,82 @@ $(function() {
 		link: "#garniture"
 	});
 	$("div[data-role='popup']").each(function() {
-        $(this).on({
-            popupbeforeposition: function () {
-                var width = $(this).attr('data-video-width');
-                var height = $(this).attr('data-video-height');
-                var poster = $(this).attr('data-video-poster');
-                var video = $(this).attr('data-video-url');
+		if($(this).attr('data-video-url')) {
+	        $(this).on({
+	            popupbeforeposition: function () {
+	                var width = $(this).attr('data-video-width');
+	                var height = $(this).attr('data-video-height');
+	                var poster = $(this).attr('data-video-poster');
+	                var video = $(this).attr('data-video-url');
 
-                content = '<video width="' + width + '" height="' + height + '" poster="' + poster + '" controls ><source src="' + video + '" type="video/mp4"></video>';
-                $(this).html(content);
-            },
-            popupafterclose: function () {
-                $(this).html(null);
-            }
-        });
+	                content = '<video width="' + width + '" height="' + height + '" poster="' + poster + '" controls ><source src="' + video + '" type="video/mp4"></video>';
+	                $(this).html(content);
+	            },
+	            popupafterclose: function () {
+	                $(this).html(null);
+	            }
+	        });
+	    }
     });
-});
+
+    var imgs = ['content/img/option1-4-fond2.png', 'content/img/option1-4-fond1.png', 'content/img/option1-4-masque.png', 'content/img/option1-4-legende.png', 'content/img/options1-water.png'];
+
+	function garniture_animation() {
+		$('#garniture-animation-container').empty();
+
+		$('<div>').css({
+			'backgroundImage': 'url(' + imgs[0] + ')'
+		}).appendTo($('#garniture-animation-container'));
+
+		$('<div>').css({
+			'backgroundImage': 'url(' + imgs[1] + ')'
+		}).appendTo($('#garniture-animation-container'));
+
+		setTimeout(function() {
+			$('<div>').addClass('water').css({
+				'backgroundImage': 'url(' + imgs[4] + ')'
+			}).insertAfter($('#garniture-animation-container div:eq(0)')).animate({
+				'top': '0'
+			}, 4000, "easeInSine");
+
+			$('<div>').css({
+				'backgroundImage': 'url(' + imgs[2] + ')',
+				'display': 'none'
+			}).appendTo($('#garniture-animation-container')).fadeIn(2000);
+
+			$('<div>').css({
+				'backgroundImage': 'url(' + imgs[3] + ')',
+				'display': 'none'
+			}).appendTo($('#garniture-animation-container')).fadeIn(2000);
+		}, 1000);
+	}
+
+	function capotage_animation() {
+		var animation_interval = setInterval(function() {
+			if(window.location.hash != '#capotage') {
+				clearInterval(animation_interval);
+
+				$('#capotage-animation-container div').hide();
+			} else {
+				$('#capotage-animation-container div').fadeToggle(1500);
+			}
+		}, 3000);
+	}
+
+	$(window).hashchange(function() {
+		if(location.hash == '#garniture') {
+			garniture_animation();
+		}
+
+		if(location.hash == '#capotage') {
+
+			var capotage_animation_trigger = capotage_animation();
+		}
+	});
+
+	$('a[target="_blank"]').click(function() {
+	    window.open($(this).attr("href"), "_system");
+	    
+	    return false;
+	});
+})
