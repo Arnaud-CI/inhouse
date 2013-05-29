@@ -6,10 +6,10 @@
         id        = "eu.pcm.hycare-fr"
         version   = "1.0.1">
 
-    <name>PCM HyCare</name>
+    <name>PCM HyCare inHouse</name>
 
     <description>
-        Présentation de Hycare, pompe à vis excentrée hygiénique par PCM.
+        Présentation de Hycare, pompe à vis excentrée hygiénique par PCM. InHouse version.
     </description>
 
     <author href="https://www.pcm.eu" email="trevor@pcmpumps.co.uk">
